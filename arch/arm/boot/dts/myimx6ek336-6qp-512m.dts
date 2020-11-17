@@ -1,0 +1,16 @@
+/*
+ * MYZR Technology Co.,Ltd
+ * http://www.myzr.com.cn
+ * Tang Bin <tangb@myzr.com.cn>
+ */
+
+/dts-v1/;
+#include "imx6q.dtsi"
+#include "myimx6ek336.dtsi"
+#include "imx6qp.dtsi"
+#include "myimx6qp.dtsi"
+
+/ {
+	model = "MYZR i.MX6 Evaluation Kit (MY-IMX6-EK336-6QP-512M)";
+	compatible = "myzr,myimx6", "myzr,myimx6q", "myzr,myimx6cb336", "myzr,myimx6ek336", "fsl,imx6q";
+};

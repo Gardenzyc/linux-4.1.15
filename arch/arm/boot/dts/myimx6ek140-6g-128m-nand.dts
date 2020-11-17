@@ -1,0 +1,26 @@
+/*
+ * MYZR Technology Co.,Ltd
+ * http://www.myzr.com.cn
+ * Tang Bin <tangb@myzr.com.cn>
+ */
+
+/dts-v1/;
+
+#include "myimx6g-pinfunc.h"
+#include "myimx6g.dtsi"
+
+#include "myimx6ek140-iomuxc.dtsi"
+#include "myimx6ek140-6g-snvs.dtsi"
+#include "myimx6cb140-nand4nand.dtsi"   /* myimx6cb140-nand4emmc.dtsi */
+#include "myimx6a7-lcd4wvga.dtsi"       /* myimx6a7-lcd4wqvga.dtsi */
+#include "myimx6a7-enet4uart.dtsi"      /* myimx6a7-enet4enet.dtsi */
+#include "myimx6ek140.dtsi"
+
+/ {
+	model = "MYIMX6EK140-6G-128M-Nand Evaluation Kit";
+	compatible = "myzr,myimx6cb140", "myzr,myimx6ek140", "fsl,imx6ul";
+};
+
+&iomuxc {
+    pinctrl-0 = <&pinctrl_nand_gpio &pinctrl_gpio_gpio &pinctrl_snvs_4g_rst &pinctrl_snvs_gpio>;
+};
