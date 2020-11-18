@@ -1,4 +1,4 @@
-﻿/*
+/*
  * MYZR Technology Co.,Ltd
  * http://www.myzr.com.cn
  * Tang Bin <tangb@myzr.com.cn>
@@ -143,8 +143,8 @@
     mxcfb1: fb@0 {
         compatible = "fsl,mxc_sdc_fb";
         disp_dev = "ldb";
-        interface_pix_fmt = "RGB666";
-        default_bpp = <16>;
+        interface_pix_fmt = "RGB24";
+        default_bpp = <24>;
         int_clk = <0>;
         late_init = <0>;
         status = "disabled";
@@ -414,43 +414,42 @@
 
     lvds-channel@0 {
         fsl,data-mapping = "spwg";
-        fsl,data-width = <18>;
+        fsl,data-width = <24>;
         status = "okay";
 
         display-timings {
             native-mode = <&timing0>;
             timing0: hsd100pxn1 {
-                clock-frequency = <65000000>;
+                clock-frequency = <58000000>;
                 hactive = <1024>;
-                vactive = <600>;
-                hback-porch = <220>;
-                hfront-porch = <40>;
-                vback-porch = <21>;
-                vfront-porch = <7>;
-                hsync-len = <60>;
-                vsync-len = <10>;
+                vactive = <768>;
+                hback-porch = <100>;
+                hfront-porch = <100>;
+                vback-porch = <12>;
+                vfront-porch = <12>;
+                hsync-len = <120>;
+                vsync-len = <14>;
             };
         };
     };
 
     lvds-channel@1 {
         fsl,data-mapping = "spwg";
-        fsl,data-width = <18>;
-        primary;
+        fsl,data-width = <24>;
         status = "okay";
 
         display-timings {
             native-mode = <&timing1>;
             timing1: hsd100pxn1 {
-                clock-frequency = <65000000>;
+                clock-frequency = <58000000>;
                 hactive = <1024>;
-                vactive = <600>;
-                hback-porch = <220>;
-                hfront-porch = <40>;
-                vback-porch = <21>;
-                vfront-porch = <7>;
-                hsync-len = <60>;
-                vsync-len = <10>;
+                vactive = <768>;
+                hback-porch = <100>;
+                hfront-porch = <100>;
+                vback-porch = <12>;
+                vfront-porch = <12>;
+                hsync-len = <120>;
+                vsync-len = <14>;
             };
         };
     };
